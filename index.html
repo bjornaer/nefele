@@ -1,24 +1,132 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-ES">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nefele</title>
-  <meta name="description" content="Nefele">
+  <title>Plataforma Néfele · La fotoprotección es salud</title>
+  <meta name="description" content="Plataforma Néfele: familias, asociaciones de pacientes y profesionales sanitarios por los derechos de las personas con patologías fotosensibles.">
+  <link rel="icon" href="favicon.png">
   <style>
-    :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #fafafa; --muted: #666; }
-    @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #111; --muted: #999; } }
-    * { margin: 0; box-sizing: border-box; }
-    body { min-height: 100vh; display: grid; place-items: center; padding: 1rem;
-           font-family: system-ui, sans-serif; color: var(--fg); background: var(--bg); text-align: center; }
-    h1 { font-size: clamp(2.5rem, 10vw, 5rem); font-weight: 300; letter-spacing: .1em; }
-    p { color: var(--muted); margin-top: 1rem; }
+    :root {
+      --ink: #0E1116; --blue: #3F8EFC; --yellow: #FECF67; --white: #FFFFFF;
+      --green: #B9F56E; --pink: #FF66C4; --muted: #4a5160; --soft: #f4f7fc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+    body { margin: 0; font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--white); }
+    a { color: inherit; text-decoration-color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    h2, h3 { line-height: 1.2; }
+    .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1rem; }
+
+    nav { position: sticky; top: 0; z-index: 1; background: var(--ink); }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1.5rem; margin: 0; padding: .75rem 1rem; list-style: none; }
+    nav a { color: var(--white); text-decoration: none; font-weight: 600; }
+    nav a:hover, nav a:focus-visible { color: var(--yellow); }
+
+    header { background: var(--blue); color: var(--white); text-align: center; padding: 3rem 1rem 3.5rem; }
+    header img { width: min(100%, 26rem); height: auto; }
+    header p { max-width: 36rem; margin: 1.5rem auto 0; font-size: 1.2rem; }
+
+    section { padding: 3.5rem 0; }
+    section:nth-of-type(even) { background: var(--soft); }
+    h2 { font-size: clamp(1.75rem, 5vw, 2.25rem); margin: 0 0 1.5rem; padding-bottom: .5rem; border-bottom: 3px solid var(--blue); }
+    h3 { font-size: 1.25rem; margin: 2rem 0 .75rem; }
+
+    .callout { background: #fff6df; border-left: 6px solid var(--yellow); padding: 1rem 1.25rem; font-weight: 600; margin: 1rem 0; }
+    blockquote { margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: var(--white); border-left: 6px solid var(--pink); font-size: 1.1rem; }
+    blockquote footer { margin-top: .75rem; font-size: .95rem; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+    .card { background: var(--soft); border-top: 5px solid var(--green); padding: 1rem 1.25rem; }
+    .card h3 { margin-top: 0; }
+    .card:nth-child(2) { border-top-color: var(--yellow); }
+    .card:nth-child(3) { border-top-color: var(--pink); }
+    .button { display: inline-block; background: var(--ink); color: var(--white); padding: .7rem 1.25rem; text-decoration: none; font-weight: 600; border-radius: 4px; }
+    .button:hover, .button:focus-visible { background: var(--blue); }
+
+    #contacto { background: var(--ink); color: var(--white); text-align: center; }
+    #contacto h2 { color: var(--yellow); border-bottom: 0; }
+    #contacto a { font-size: 1.4rem; font-weight: 600; text-decoration-color: var(--yellow); }
+    footer.site { text-align: center; padding: 1.5rem 1rem; font-size: .9rem; color: var(--muted); }
   </style>
 </head>
 <body>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#quienes-somos">Quiénes somos</a></li>
+      <li><a href="#apoyos">Apoyos</a></li>
+      <li><a href="#manifiesto">Manifiesto</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1 style="margin:0"><img src="logo.png" width="700" height="578" alt="Néfele — La fotoprotección es salud"></h1>
+    <p>Plataforma para la defensa de los derechos de las personas con patologías fotosensibles.</p>
+  </header>
+
   <main>
-    <h1>nefele</h1>
-    <p>Coming soon.</p>
+    <section id="quienes-somos">
+      <div class="wrap">
+        <h2>Quiénes somos</h2>
+        <p>La Plataforma Néfele es una iniciativa independiente formada por familias, asociaciones de pacientes y profesionales sanitarios para defender los derechos de las personas con patologías fotosensibles: enfermedades en las que la radiación ultravioleta o la luz visible tienen un impacto claro sobre la calidad de vida, la evolución de la enfermedad e incluso la esperanza de vida de los pacientes.</p>
+        <p>Trabajamos con las administraciones para garantizar la accesibilidad de estas personas en su vida diaria, sus estudios y su trabajo, y que puedan disfrutar con seguridad de los espacios públicos.</p>
+        <h3>Asociaciones de pacientes que forman parte de la plataforma</h3>
+        <ul>
+          <li><strong>AXP</strong> — <a href="https://xerodermapigmentosum.es/">Asociación Xeroderma Pigmentosum</a></li>
+          <li><strong>ALBA</strong> — <a href="https://albinismo.es/">Asociación para la Ayuda a Personas con Albinismo</a></li>
+          <li><strong>ANADEJU</strong> — <a href="https://anadeju.org/">Asociación Nacional de Dermatomiositis Juvenil</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="apoyos">
+      <div class="wrap">
+        <h2>Apoyos</h2>
+        <p>La <a href="https://aedv.es/"><strong>Academia Española de Dermatología y Venereología (AEDV)</strong></a> respalda nuestra iniciativa y ha manifestado al Ministerio de Sanidad su apoyo a la financiación pública de fotoprotectores para pacientes con indicación médica acreditada.</p>
+        <blockquote>
+          «En estos pacientes, la fotoprotección no constituye una medida cosmética ni una recomendación preventiva genérica. Es una parte fundamental del tratamiento […]. La AEDV considera, por tanto, que existe una sólida justificación clínica y sanitaria para establecer los mecanismos normativos que permitan su financiación pública en los colectivos definidos en la propuesta.»
+          <footer>Dra. Isabel Belinchón Romero, presidenta de la AEDV · Madrid, 29 de septiembre de 2026</footer>
+        </blockquote>
+        <p><a class="button" href="carta-apoyo-aedv.pdf">Leer la carta de apoyo (PDF)</a></p>
+        <p>Seguimos sumando apoyos que compartan nuestra causa. Si tu organización quiere apoyarnos, <a href="#contacto">escríbenos</a>.</p>
+      </div>
+    </section>
+
+    <section id="manifiesto">
+      <div class="wrap">
+        <h2>Manifiesto</h2>
+
+        <h3>Nuestro objetivo actual</h3>
+        <p class="callout">Conseguir que el Sistema Nacional de Salud (SNS) financie el fotoprotector a los pacientes que lo necesitan como parte de su tratamiento.</p>
+        <p>Para estos pacientes el fotoprotector es salud: evita brotes, quemaduras graves, daño cutáneo irreversible y cáncer de piel. La Plataforma Néfele defiende que la clasificación administrativa de un producto no debe determinar el acceso de los pacientes al mismo. Para estas familias, el fotoprotector forma parte de la rutina diaria: ir al colegio, trabajar o salir a la calle depende de él. Detrás de cada envase hay una persona que necesita protección y una familia que asume el gasto. Si un producto es necesario por motivos médicos, el acceso al mismo no debería depender de la capacidad económica de quien lo necesita.</p>
+
+        <h3>Por qué ocurre</h3>
+        <p>La razón de que a día de hoy el SNS no financie el fotoprotector es formal. El Reglamento (CE) 1223/2009 clasifica los fotoprotectores como productos cosméticos, y la Ley de Garantías (art. 92.2 del Real Decreto Legislativo 1/2015) excluye los cosméticos de la prestación farmacéutica. Es una clasificación administrativa que no tiene en cuenta la indicación clínica. Así, un producto que evita quemaduras y tumores queda fuera de la financiación del SNS, y el gasto recae sobre las familias, a menudo de por vida.</p>
+        <p>El SNS ya ha resuelto situaciones similares. Los productos dietéticos tampoco forman parte de la prestación farmacéutica y, sin embargo, se financian a través de la cartera de servicios cuando hay una indicación médica. Lo que pedimos ya tiene precedente en España y se lleva a cabo en <a href="https://www.drugtariff.nhsbsa.nhs.uk/#/00315892-DC/DC00315886/Part%20XV%20-%20Borderline%20Substances">otros países europeos</a>.</p>
+
+        <h3>Qué pedimos para este objetivo</h3>
+        <p>Pedimos que el Sistema Nacional de Salud financie el fotoprotector a los pacientes que tengan una indicación médica acreditada y para los que no exista una alternativa equivalente.</p>
+        <p>Pedimos una norma con rango de ley que permita financiar, de forma excepcional, productos clasificados como cosméticos cuando su falta supone un menoscabo para la salud del paciente. En el caso del fotoprotector, el SNS podría financiarlo a través de la prestación farmacéutica o a través de la cartera común de servicios.</p>
+        <p>En cualquier caso, el paciente debe poder acceder a su tratamiento con una receta médica visada y retirarlo en la farmacia, como el resto de tratamientos.</p>
+        <p>Después, una norma de desarrollo fijaría, con la participación de las sociedades científicas y con criterios clínicos, qué patologías pueden beneficiarse, quién prescribe el producto y cómo se acredita la indicación.</p>
+
+        <h3>Nuestros principios</h3>
+        <div class="grid">
+          <div class="card"><h3>Evidencia científica</h3><p>Nuestra toma de decisiones está siempre basada en evidencia científica y bibliografía contrastada.</p></div>
+          <div class="card"><h3>Impacto</h3><p>Buscamos medidas con impacto real en la vida, accesibilidad e inclusión de estos pacientes.</p></div>
+          <div class="card"><h3>Cooperación</h3><p>Trabajamos con sociedades científicas, asociaciones de pacientes y administraciones. Seguimos sumando apoyos que compartan nuestra causa.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap">
+        <h2>Contacta con nosotras</h2>
+        <p><a href="mailto:hola@nefele.org">hola@nefele.org</a></p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site">© 2026 Plataforma Néfele · La fotoprotección es salud</footer>
 </body>
 </html>
